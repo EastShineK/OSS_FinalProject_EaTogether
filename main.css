@@ -10,11 +10,16 @@ html{
         border: 1px solid #bcbcbc;
         background-color: white;
       }
+@font-face {
+        font-family: "jua";
+        src: url("font/BMJUA_ttf.ttf");
+}
 
 #jb-header {
         text-align: center;
         padding: 50px 10px 0px 0px;
         font-family: 'Big Shoulders Inline Display', cursive;
+        font-family: "jua";
         margin-bottom: 20px;
         border: 1px solid #bcbcbc;
         background-color: #F8E0F7;
@@ -46,6 +51,7 @@ html{
         border: 1px solid #bcbcbc;
         background-color: #F1F8E0;
         font-family: 'Josefin Sans', sans-serif;
+        font-family: "jua";
       }
 
 #jb-sidebar {
@@ -57,6 +63,7 @@ html{
         border: 1px solid #bcbcbc;
         background-color: #F1F8E0;
         font-family: 'Josefin Sans', sans-serif;
+        font-family: "jua";
       }
 
 #jb-footer {
@@ -65,6 +72,7 @@ html{
         border: 1px solid #bcbcbc;
         background-color: #F6CECE;
         font-family: 'Josefin Sans', sans-serif;
+        font-family: "jua";
       }
 
 @media ( max-width: 600px ) {
