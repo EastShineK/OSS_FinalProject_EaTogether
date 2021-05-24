@@ -1,0 +1,108 @@
+#jb-container {
+    width: 1100px;
+    height: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+    background-color: white;
+}
+
+@font-face {
+    font-family: "jua";
+    src: url("../font/BMJUA_ttf.ttf");
+}
+
+#jb-header {
+    text-align: center;
+    padding: 5px 15px 25px 15px;
+    font-family: 'Big Shoulders Inline Display', cursive;
+    font-family: "jua";
+    margin-bottom: 20px;
+    border: 1px solid #bcbcbc;
+    background-color: #F8E0F7;
+    border-radius: 2em;
+}
+
+#jb-contentU {
+    height: 450px;
+    width: 100%;
+    padding: 20px;
+    margin-right: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+    background-color: #F1F8E0;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 2em;
+    font-family: "jua";
+    overflow: auto;
+}
+
+#jb-contentD {
+    height: 60px;
+    width: 100%;
+    padding: 2px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+    background-color: #F1F8E0;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 2em;
+    font-family: "jua";
+}
+
+#list{
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+#jb-footer {
+    clear: both;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+    background-color: #F6CECE;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 2em;
+    font-family: "jua";
+}
+
+.move {
+	display: inline-block;
+	width: 200px;
+	height: 54px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 54px;
+	outline: none;
+}
+
+.move::before,
+.move::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+
+.move,
+.move::before,
+.move::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.move {
+	background-color: #333;
+	border: 2px solid #333;
+	color: #fff;
+	line-height: 50px;
+}
+
+.move:hover {
+	background-color: #fff;
+	border-color: #59b1eb;
+	color: #59b1eb;
+}
