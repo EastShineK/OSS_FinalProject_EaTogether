@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EaTogether-Review_Snack</title>
+    <link rel="stylesheet" type="text/css" href="review.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <!--External css-->
+    <!--Link of fonts-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        td {
+            border: 1px solid #444444;
+            padding: 5px;
+            background-color: #fffefe;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jb-container">
+        <div id="jb-header">
+            <p style="vertical-align: top; text-align: left;">EaTogether</p>
+            <h1>'신전떡볶이'에 대해서 평가해주세요!</h1>
+        </div>
+
+        <div id="jb-contentU">
+            <h2 style="text-align: center;">후기 남기기</h2>
+            <div class="container">
+                <div class="d-flex align-items-center mb-2 mt-2">
+                    <input type="text" class="form-control" id="task-input" placeholder="가게에 대한 후기를 작성해주세요"
+                        onkeyup="enterkey();">
+                    <button type="button" id="add" class="btn btn-primary ms-1 text-nowrap"><i class="bi bi-plus"></i>
+                        남기기</button>
+                </div>
+
+                <div class="d-flex">
+                    <div class="flex-grow-1 bg-light rounded-2 p-2 me-1 w-50">
+                        <div id="todo-list">
+                            <div class="task bg-light p-1 rounded-2 ps-2 d-flex align-items-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="jb-contentD">
+            <div style="float: right;">
+                <button class="move" onclick="history.back()">이전</button>
+                <button class="move" onclick="location.href='../main.html'">메인으로</button>
+            </div>
+        </div>
+
+        <div id="jb-footer">
+            <p>Copyright by Open-Source Software Practice Team #20</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+
+        <script>
+            let revNumber = 0;
+
+            function printName() {
+                const score = document.getElementById('button-addon2').value;
+                document.getElementById("result").innerText = score;
+                localStorage.setItem('lastScore', total);
+                localStorage.setItem('lastNumber', revNumber);
+
+                var el = document.getElementsByClassName('form-control');
+                for(var i=0; i<el.length; i++){
+                    el[i].value = '';
+                }
+            }
+
+            function loadScore() {
+                let lastScore = localStorage.getItem("lastScore");
+                let lastNumber = localStorage.getItem("lastNumber");
+                if (!lastScore) return;
+
+                scorel = JSON.parse(lastScore);
+                numberl = JSON.parse(lastNumber);
+            }
+
+            const Type = {
+                Todo: 1
+            };
+
+            let tasks = [];
+
+            function loadTasks() {
+                let lastTasks = localStorage.getItem("tasks");
+                if (!lastTasks) return;
+
+                tasks = JSON.parse(lastTasks);
+                tasks.forEach(addToList);
+            }
+
+            function saveTasks() {
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+            }
+
+            function addToList(task) {
+                let div = document.createElement("div");
+                div.className = "task bg-light p-1 rounded-2 ps-2 d-flex align-items-center";
+
+                let span = document.createElement("span");
+                span.className = "me-auto";
+                span.textContent = task.text;
+                div.appendChild(span);
+
+                let buttonRemove = document.createElement("button");
+                buttonRemove.className = "btn btn-sm btn-danger";
+                buttonRemove.innerHTML = '<i class="bi bi-x"></i>';
+                div.appendChild(buttonRemove);
+
+                buttonRemove.addEventListener("click", () => {
+                    div.remove();
+                    tasks = tasks.filter(t => t !== task);
+                    saveTasks();
+                });
+
+                let list = document.querySelector(task.type === Type.Todo ? "#todo-list" : "#done-list");
+                list.appendChild(div);
+                saveTasks();
+
+            }
+
+            function enterkey() {
+                if (window.event.keyCode == 13) {
+
+                    let input = document.querySelector("#task-input");
+                    let text = input.value;
+
+                    if (!text.length) return;
+
+                    let task = {
+                        text: text,
+                        type: Type.Todo
+                    };
+
+                    tasks.push(task);
+                    saveTasks();
+
+                    addToList(task);
+
+                    input.value = "";
+                }
+            }
+
+            window.addEventListener("load", () => {
+                loadTasks();
+                loadScore();
+            });
+
+            let button = document.querySelector("#add");
+            button.addEventListener("click", () => {
+                let input = document.querySelector("#task-input");
+                let text = input.value;
+
+                if (!text.length) return;
+
+                let task = {
+                    text: text,
+                    type: Type.Todo
+                };
+
+                tasks.push(task);
+                saveTasks();
+
+                addToList(task);
+
+                input.value = "";
+            });
+        </script>
+</body>
+
+</html>
