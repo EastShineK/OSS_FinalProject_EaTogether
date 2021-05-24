@@ -21,9 +21,22 @@
     border-radius: 2em;
 }
 #jb-content {
-    height: 630px;
+    height: 595px;
     width: 100%;
     padding: 20px;
+    margin-right: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+    background-color: #F1F8E0;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 2em;
+    font-family: "jua";
+    overflow: auto;
+}
+#jb-contentD {
+    height: 60px;
+    width: 100%;
+    padding: 2px;
     margin-right: 20px;
     margin-bottom: 20px;
     float: left;
@@ -54,6 +67,7 @@
 	text-decoration: none;
 	line-height: 54px;
 	outline: none;
+    border-radius: 2em;
 }
 .move::before,
 .move::after {
