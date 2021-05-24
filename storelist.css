@@ -33,12 +33,10 @@
     border-radius: 2em;
     font-family: "jua";
 }
-
 #list{
     border-collapse: separate;
     border-spacing: 0 20px;
 }
-
 #jb-footer {
     clear: both;
     padding: 20px;
@@ -48,7 +46,6 @@
     border-radius: 2em;
     font-family: "jua";
 }
-
 .move {
 	display: inline-block;
 	width: 200px;
@@ -74,7 +71,6 @@
 	-webkit-transition: all .3s;
 	transition: all .3s;
 }
-
 .move {
 	background-color: #333;
 	border: 2px solid #333;
