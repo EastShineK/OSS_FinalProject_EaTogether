@@ -36,7 +36,8 @@
   
   /* 내가 보낸 메시지 */
   .me {
-    width: 90%;
+    float: right;
+    width: 50%;
     margin: auto;
     background-color: lemonchiffon;
     border-radius: 5px;
@@ -45,7 +46,8 @@
   
   /* 상대방이 보낸 메시지 */
   .other {
-    width: 90%;
+    float: left;
+    width: 50%;
     margin: auto;
     background-color: white;
     border-radius: 5px;

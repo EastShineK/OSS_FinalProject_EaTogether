@@ -1,0 +1,63 @@
+#jb-container {
+    width: 1100px;
+    height: 950px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+    background-color: white;
+}
+@font-face {
+    font-family: "jua";
+    src: url("../font/BMJUA_ttf.ttf");
+}
+#jb-header {
+    text-align: center;
+    padding: 5px 15px 25px 15px;
+    font-family: 'Big Shoulders Inline Display', cursive;
+    font-family: "jua";
+    margin-bottom: 20px;
+    border: 1px solid #bcbcbc;
+    background-color: #F8E0F7;
+    border-radius: 2em;
+}
+#jb-map {
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+    background-color: #F1F8E0;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 2em;
+    font-family: "jua";
+}
+#jb-review {
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+    background-color: #F1F8E0;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 2em;
+    font-family: "jua";
+}
+
+#list{
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+#jb-footer {
+    clear: both;
+    padding: 20px;
+    border: 1px solid #bcbcbc;
+    background-color: #F6CECE;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 2em;
+    font-family: "jua";
+}
