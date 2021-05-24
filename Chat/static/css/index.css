@@ -1,5 +1,6 @@
 /* 메인 */
 #main {
+    float: unset;
     margin: auto;
     margin-top: 100px;
     border-radius: 20px;
@@ -11,45 +12,56 @@
   
   /* 채팅 영역 */
   #chat {
+    float: unset;
     height: 90%;
     width: 100%;
     overflow-y: auto;
+    clear: both;
   }
   
   /* 접속 알림 */
   .connect {
-    width: 90%;
-    margin: auto;
-    background-color: aquamarine;
-    text-align: center;
+    float: unset;
+    width: 100%;
     margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    clear: both;
   }
   
   /* 접속 종료 알림 */
   .disconnect {
-    width: 90%;
-    margin: auto;
-    background-color: indianred;
-    text-align: center;
+    float: unset;
+    width: 100%;
     margin-top: 10px;
+    font-weight: bold;
+    color: indianred;
+    text-align: center;
+    border-radius: 5px;
+    clear: both;
   }
   
   /* 내가 보낸 메시지 */
   .me {
     float: right;
-    width: 50%;
+    width: 60%;
     margin: auto;
     background-color: lemonchiffon;
     border-radius: 5px;
+    padding: 5px;
     margin-top: 10px;
+    clear: both;
   }
   
   /* 상대방이 보낸 메시지 */
   .other {
     float: left;
-    width: 50%;
+    width: 60%;
     margin: auto;
     background-color: white;
     border-radius: 5px;
+    padding: 5px;
     margin-top: 10px;
+    clear: both;
   }
