@@ -1,4 +1,3 @@
-const {app, BrowserWindow} = require('electron')
 const express = require('express')
 const http = require('http')
 const fs = require('fs')
@@ -6,25 +5,7 @@ const appl = express()
 const socket = require('socket.io')
 const server = http.createServer(appl)
 const io = socket(server)
-const url = require('url')
 
-let win
-
-function createWindow () {
-
-  win = new BrowserWindow({width: 800, height: 800})
-
-  win.loadURL('http://localhost:8080')
-
-  win.webContents.openDevTools()
-
-  win.on('closed', () => {
-    win = null
-  })
-
-  
-  
-}
 
 
 
@@ -87,17 +68,3 @@ appl.get('/', function(request, response) {
 server.listen(8080, function() {
     console.log('서버 실행 중..')
   })
-
-app.on('ready', createWindow)
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin'){
-    app.quit()
-  }
-})
-
-app.on('activate', ()=> {
-  if (win == null){
-    createWindow()
-  }
-})
