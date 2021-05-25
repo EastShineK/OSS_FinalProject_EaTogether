@@ -102,3 +102,24 @@
 	border-color: #59b1eb;
 	color: #59b1eb;
 }
+
+#pic{
+    width: 11%; 
+}
+
+#Name{
+    font-size: 50px; 
+    margin: 15px; 
+    text-align: left;
+}
+
+#review{
+    width: 10%;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+#rText{
+    font-size: 30px; 
+    margin: auto;
+}
