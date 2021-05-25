@@ -19,8 +19,11 @@ const server = http.createServer(app)
 /* 생성된 서버를 socket.io에 바인딩 */
 const io = socket(server)
 
+const path = require('path');
+
 app.use('/css', express.static('./static/css'))
 app.use('/js', express.static('./static/js'))
+app.use('/static', express.static('./static'))
 
 /* Get 방식으로 / 경로에 접속하면 실행 됨 */
 app.get('/', function(request, response) {
@@ -68,6 +71,12 @@ io.sockets.on('connection', function(socket) {
     socket.broadcast.emit('update', {type: 'disconnect', name: 'SERVER', message: socket.name + '님이 나가셨습니다.'});
   })
 })
+
+
+app.get('/index', function(request, response){
+  response.sendFile(path.join(__dirname, './static/index.html'));
+})
+
 
 /* 서버를 8080 포트로 listen */
 server.listen(8080, function() {

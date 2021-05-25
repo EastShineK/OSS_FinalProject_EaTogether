@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>채팅</title>
-        <link rel="stylesheet" href="/css/index.css">
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="/js/index.js"></script>
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="./socket.io/socket.io.js"></script>
+        <script src="./js/login.js"></script>
+        <script src="./js/index.js"></script>
     </head>
     <body>
-        <input type="text" id="inputID" placeholder="닉네임을 설정하시오" onKeypress="javascript:if(event.keyCode==13) {send()}">
-        <button onclick="send()">전송</button>
+        <input type="text" id="inputID" placeholder="닉네임을 설정하시오" onKeypress="javascript:if(event.keyCode==13) {login()}">
+        <button onclick="login()">전송</button>
     </body>
 </html>
