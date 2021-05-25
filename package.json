@@ -4,10 +4,10 @@
   "description": "",
   "main": "js.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "electron .",
     "package": "electron-forge package",
-    "build:win": "npm run build:win32 && npm run build:win64", 
-    "build:win32": "electron-builder --win portable --ia32", 
+    "build:win": "npm run build:win32 && npm run build:win64",
+    "build:win32": "electron-builder --win portable --ia32",
     "build:win64": "electron-builder --win portable --x64",
     "make": "electron-forge make"
   },
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/EastShineK/OSS_FinalProject_EaTogether.git"
   },
-  "author": "",
+  "author": "Ossp-#20",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EastShineK/OSS_FinalProject_EaTogether/issues"
@@ -34,7 +34,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.57",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
     "@electron-forge/maker-zip": "^6.0.0-beta.57",
-    "electron": "9.1.0"
+    "electron": "^9.1.0"
   },
   "config": {
     "forge": {
