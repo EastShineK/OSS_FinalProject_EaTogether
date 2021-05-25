@@ -41,19 +41,20 @@
 
             <div id="jb-map">
                 <h2 style="text-align: center;">지도</h2>
-                <div>
-                    <div id="daumRoughmapContainer1621843570013" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                <div align="center">
+                    <div id="daumRoughmapContainer1621847677675" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                
                     <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1621847677675",
+                            "key" : "25w8i",
+                            "mapWidth" : "900",
+                            "mapHeight" : "450"
+                        }).render();
+                    </script>
                 </div>
- 
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp" : "1621843570013",
-                        "key" : "25w53",
-                        "mapWidth" : "900",
-                        "mapHeight" : "450"
-                    }).render();
-                </script>
             </div>
 
             <div id="jb-footer">
