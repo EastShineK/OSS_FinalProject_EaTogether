@@ -13,7 +13,7 @@
 ![채팅화면2](READMEimg/chatting2.png)
 
 ## Link of Demo Video
-
+https://www.youtube.com/watch?v=v3hx9lJIujU
 
 ## Installation Instructions
 1. electron을 설치한다.
